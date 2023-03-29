@@ -53,6 +53,10 @@ createApp ({
         },
         scroll(){
             this.interval = setInterval(this.showNext, 3000);
+        },
+        stopScroll(){
+            clearInterval(this.interval);
+            this.interval = "";
         }
     }
 }).mount("#app")
