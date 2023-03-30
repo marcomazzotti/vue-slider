@@ -17,18 +17,18 @@
             <div class="slider-wrapper" tabindex="0" @mouseover="stopScroll" @mouseleave="scroll">
 
                 <div class="item">
-                    <img :src="slides[activeImg].image" alt="">
+                    <img :src="slides[activeImg].image" alt="slides[0].title">
                     <div class="text">
-                        <h3>{{ slides[activeImg].title }}</h3>
-                        <p>{{ slides[activeImg].text }}</p>
+                        <h3>{{slides[activeImg].title}}</h3>
+                        <p>{{slides[activeImg].text}}</p>
                     </div>
                 </div>
 
                 <div class="thumbs">
                     <div class="prev" @click="showPrev"></div>
                     <div class="next" @click="showNext"></div>
-                    <div class="thumb" :class="index === activeImg ? 'active' : ''" v-for="(image, index) in slides">
-                        <img :src="slides[index].image" alt="" />
+                    <div class="thumb" :class="index === activeImg ? 'active' : ''" v-for="(image, index) in slides" @click="clikcOnThumb(index)">
+                        <img :src="slides[index].image" alt="Svezia" />
                     </div>
                 </div>
 

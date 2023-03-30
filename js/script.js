@@ -57,6 +57,9 @@ createApp ({
         stopScroll(){
             clearInterval(this.interval);
             this.interval = "";
+        },
+        clikcOnThumb(imgToShow){
+            this.activeImg = imgToShow;
         }
     }
 }).mount("#app")
